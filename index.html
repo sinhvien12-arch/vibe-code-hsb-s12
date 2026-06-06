@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEAM 12 — RAPID AGENCY | Digital Transformation & Creative Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,500&family=Inter:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="prototype.css">
+  <style>
+    /* TOI UU ANH CASE STUDY */
+    .work-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+      transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+    }
+    
+    /* Giai quyet loi lech tong: Ep anh Case 3 ve Grayscale */
+    .work-item:nth-of-type(3) .work-visual img {
+      filter: grayscale(100%) contrast(1.2) brightness(0.9);
+    }
+    
+    .work-item:hover .work-visual img {
+      transform: scale(1.03);
+      opacity: 0.85;
+    }
+    
+    /* Khi hover vao Case 3 thi hien anh goc nhe nhang */
+    .work-item:nth-of-type(3):hover .work-visual img {
+      filter: grayscale(30%) contrast(1.1) brightness(1);
+    }
+
+    /* SUA LOI CHU NHO BI TOI & KHO DOC */
+    .about-body p, 
+    .svc-desc, 
+    .work-info p, 
+    .contact-info p {
+      color: #E0E0E0 !important; /* Thay mau xam toi bang xam sang */
+      font-weight: 400 !important; /* Tang len muc Regular */
+      line-height: 1.6;
+      letter-spacing: 0.3px;
+    }
+    
+    .cs-grid p {
+      color: #CCCCCC !important;
+      font-weight: 400 !important;
+    }
+    
+    /* TOOLKIT GRID */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 12px;
+    }
+    .tool-card {
+      background: #111;
+      padding: 12px;
+      border: 1px solid #222;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      text-align: center;
+      color: #888;
+    }
+
+    /* THEMM LUOI LOGO DOI TAC (LOGO GRID) */
+    .client-logo-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      padding: 40px 0;
+      margin-bottom: 60px;
+    }
+    .logo-item {
+      text-align: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      letter-spacing: 4px;
+      color: #444; /* Mau xam toi mac dinh */
+      transition: color 0.3s ease;
+    }
+    .logo-item.serif-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-style: italic;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+    .logo-item.tech-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+    .client-logo-grid:hover .logo-item {
+      color: #888; /* Sang len dong loat khi hover vao vung logo */
+    }
+    .logo-item:hover {
+      color: #ff0033 !important; /* Chuyen do ruc ro khi chi dich danh logo */
+    }
+
+    /* Responsive cho Logo Grid */
+    @media (max-width: 768px) {
+      .client-logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ░░ NAVIGATION ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">RAPID AGENCY</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#competencies">Capabilities</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#works">Case Studies</a></li>
+    <li><a href="#testimonials">Clients</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ░░ HERO SECTION ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section id="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow ui reveal">Next-Gen Creative Growth Engine &nbsp;·&nbsp; TEAM 12</p>
+    <h1 class="hero-title reveal">RAPID<span class="red">AGENCY</span></h1>
+    <div class="hero-lines reveal">
+      <p class="hero-line serif-italic">Disrupt.</p>
+      <p class="hero-line serif-italic">Optimize.</p>
+      <p class="hero-line serif-italic">Scale.</p>
+    </div>
+    <p class="hero-sub reveal">We bridge the gap between radical creative vision and data-driven market performance. We move fast, but we never head in the wrong direction.</p>
+    <div class="hero-stats reveal">
+      <div class="h-stat"><span>10</span><small class="ui">Strategists</small></div>
+      <div class="h-sep"></div>
+      <div class="h-stat"><span>5</span><small class="ui">Deployments</small></div>
+      <div class="h-sep"></div>
+      <div class="h-stat"><span>360%</span><small class="ui">Avg ROAS</small></div>
+    </div>
+  </div>
+
+  <div class="hero-collage" aria-hidden="true">
+    <div class="collage-track">
+      <div class="collage-img" style="--h:520px"><img src="assets/members/01-pham-yen-nhi.jpg" alt="Pham Yen Nhi"></div>
+      <div class="collage-img" style="--h:440px"><img src="assets/members/02-phung-thai-minh-ngoc.jpg" alt="Phung Thai Minh Ngoc"></div>
+      <div class="collage-img" style="--h:500px"><img src="assets/members/03-do-manh-hung.jpg" alt="Do Manh Hung"></div>
+      <div class="collage-img" style="--h:460px"><img src="assets/members/04-nguyen-mai-phuong.jpg" alt="Nguyen Mai Phuong"></div>
+      <div class="collage-img" style="--h:540px"><img src="assets/members/05-nguyen-phuong-thuy-linh.jpg" alt="Nguyen Phuong Thuy Linh"></div>
+      <div class="collage-img" style="--h:480px"><img src="assets/members/06-nguyen-khanh-linh.jpg" alt="Nguyen Khanh Linh"></div>
+      <div class="collage-img" style="--h:510px"><img src="assets/members/07-nguyen-son-hai.jpg" alt="Nguyen Son Hai"></div>
+      <div class="collage-img" style="--h:450px"><img src="assets/members/08-nguyen-khanh-linh-2.jpg" alt="Nguyen Khanh Linh 2"></div>
+      <div class="collage-img" style="--h:530px"><img src="assets/members/09-dang-tuyet-ngan.jpg" alt="Dang Tuyet Ngan"></div>
+      <div class="collage-img" style="--h:470px"><img src="assets/members/10-duong-danh-quang-vinh.jpg" alt="Duong Danh Quang Vinh"></div>
+    </div>
+    <div class="collage-fade-l"></div>
+    <div class="collage-fade-r"></div>
+  </div>
+
+  <div class="hero-scroll-hint ui">Scroll to Explore</div>
+</section>
+
+<!-- ░░ 1. ABOUT US SECTION ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section id="about">
+  <div class="about-container">
+    <div class="about-left">
+      <p class="section-label ui reveal">01 — Manifesto</p>
+      <h2 class="about-title reveal">WE DO NOT<br>CHASE TRENDS.<br>WE ENGINEER<br><span class="red">CULTURE.</span></h2>
+    </div>
+    <div class="about-right">
+      <div class="about-body reveal">
+        <p><strong>RAPID AGENCY (TEAM 12)</strong> is a collective born to revolutionize digital transformation and integrated marketing ecosystems. We position ourselves as strategic business growth accelerators partnering with progressive brands.</p>
+        <p><strong>Mission:</strong> To unlock premium brand equity by connecting disruptive artistic direction with structured, hyper-optimized performance data infrastructure.</p>
+        <p><strong>Core Values:</strong> Purpose-Driven Strategies &nbsp;·&nbsp; Agile &amp; Disciplined Execution &nbsp;·&nbsp; Uncompromising Data Accountability.</p>
+      </div>
+      <div class="about-quote reveal">
+        <p class="serif-italic">"Communication is not about moving faster than everyone else. It is about moving with purpose."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ 2. CORE COMPETENCIES & TOOLKIT ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section id="competencies">
+  <div class="container">
+    <p class="section-label ui reveal">02 — Capabilities</p>
+    <h2 class="section-title reveal">CORE COMPETENCIES</h2>
+    
+    <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+      <div class="svc-card reveal">
+        <span class="svc-num">01</span>
+        <h3 class="svc-title">Strategic Consulting &amp;<br>Brand Positioning</h3>
+        <p class="svc-desc">Deep psychological consumer insights mapping, structural architecture design, and carving digital-first competitive advantages.</p>
+      </div>
+      <div class="svc-card reveal">
+        <span class="svc-num">02</span>
+        <h3 class="svc-title">Creative Direction &amp;<br>Visual Architecture</h3>
+        <p class="svc-desc">Big Idea engineering, unified aesthetic moodboarding, premium cinematic campaign writing, and flawless brand asset production.</p>
+      </div>
+      <div class="svc-card reveal">
+        <span class="svc-num">03</span>
+        <h3 class="svc-title">Omnichannel Media<br>Ecosystem Optimization</h3>
+        <p class="svc-desc">Cross-platform digital growth engine management, algorithmic multi-channel allocation, and high-yield media return modeling.</p>
+      </div>
+      <div class="svc-card reveal">
+        <span class="svc-num">04</span>
+        <h3 class="svc-title">Social-First Agile<br>Content Engineering</h3>
+        <p class="svc-desc">Intercepting digital subcultures, short-form narrative production (TikTok/Reels), and narrative copy that commands action.</p>
+      </div>
+      <div class="svc-card reveal" style="border-left: 2px solid #ff0033;">
+        <span class="svc-num" style="color: #ff0033;">05</span>
+        <h3 class="svc-title">Creative Production &amp;<br>High-Tech Content Lab</h3>
+        <p class="svc-desc">Deploying AI-assisted localized assets, high-fidelity dynamic prototyping, immersive experience scaling, and iterative live campaign optimization.</p>
+      </div>
+    </div>
+
+    <div class="toolkit-wrapper" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #1a1a1a;">
+      <p class="ui" style="color: #666; font-size: 11px; letter-spacing: 2px; margin-bottom: 20px;">TECHNOLOGY INFRASTRUCTURE &amp; FRAMEWORKS</p>
+      <div class="tools-grid">
+        <div class="tool-card"><span>Meta Ads Manager</span></div>
+        <div class="tool-card"><span>Google Analytics 4</span></div>
+        <div class="tool-card"><span>TikTok Creative Center</span></div>
+        <div class="tool-card"><span>Adobe Illustrator &amp; PS</span></div>
+        <div class="tool-card"><span>CapCut Pro &amp; Premiere</span></div>
+        <div class="tool-card"><span>Figma Ecosystem</span></div>
+        <div class="tool-card"><span>Claude AI Enterprise</span></div>
+        <div class="tool-card"><span>Vercel Platform</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ 3. THE TEAM SECTION ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section id="team">
+  <div class="container">
+    <p class="section-label ui reveal">03 — Human Capital</p>
+    <h2 class="team-heading reveal">CORE STRATEGISTS &amp;<br>LEADERSHIP</h2>
+    <p class="team-intro ui reveal">10 behavioral, creative, and performance engineering specialists operating inside an ultra-fast Agile grid.</p>
+  </div>
+
+  <div class="team-grid">
+    <article class="m-card span-3 reveal-card" style="--delay:0s">
+      <div class="m-photo"><img src="assets/members/01-pham-yen-nhi.jpg" alt="Pham Yen Nhi - Creative Lead" loading="lazy"><div class="m-overlay"></div></div>
+      <div class="m-info">
+        <span class="m-num ui">01</span><h3 class="m-name">Pham Yen Nhi</h3><p class="m-role ui">Creative Lead</p>
+        <p class="m-desc">"Transforming traditional frameworks into premium visual experiences that command absolute market attention."</p>
+      </div>
+    </article>
+    <article class="m-card span-3 reveal-card" style="--delay:0.1s">
+      <div class="m-photo"><img src="assets/members/02-phung-thai-minh-ngoc.jpg" alt="Phung Thai Minh Ngoc - Account Lead" loading="lazy"><div class="m-overlay"></div></div>
+      <div class="m-info">
+        <span class="m-num ui">02</span><h3 class="m-name">Phung Thai Minh Ngoc</h3><p class="m-role ui">Account Lead</p>
+        <p class="m-desc">Balancing resource allocation, maintaining complex project velocity, and anchoring corporate growth objectives.</p>
+      </div>
+    </article>
+    <article class="m-card span-2 reveal-card" style="--delay:0s">
+      <div class="m-photo"><img src="assets/members/03-do-manh-hung.jpg" alt="Do Manh Hung - Art Director" loading="lazy"><div class="m-overlay"></div></div>
+      <div class="m-info">
+        <span class="m-num ui">03</span><h3 class="m-name">Do Manh Hung</h3><p class="m-role ui">Art Director</p>
+        <p class="m-desc">Translating high-level strategic communication concepts into cohesive premium design systems.</p>
+      </div>
+    </article>
+    <article class="m-card span-2 reveal-card" style="--delay:0.1s">
+      <div class="m-photo"><img src="assets/members/04-nguyen-mai-phuong.jpg" alt="Nguyen Mai Phuong - Media/Digital Lead" loading="lazy"><div class="m-overlay"></div></div>
+      <div class="m-info">
+        <span class="m-num ui">04</span><h3 class="m-name">Nguyen Mai Phuong</h3><p class="m-role ui">Media/Digital Lead</p>
+        <p class="m-desc">Architecting robust full-funnel digital ecosystems and scaling structural multi-channel ROI frameworks.</p>
+      </div>
+    </article>
+    <article class="m-card span-2 reveal-card" style="--delay:0.2s">
+      <div class="m-photo"><img src="assets/members/05-nguyen-phuong-thuy-linh.jpg" alt="Nguyen Phuong Thuy Linh - Project Lead" loading="lazy"><div class="m-overlay"></div></div>
+      <div class="m-info">
+        <span class="m-num ui">05</span><h3 class="m-name">Nguyen Phuong Thuy Linh</h3><p class="m-role ui">Project Lead</p>
+        <p class="m-desc">Serving as a vital partner connecting avant-garde creative visions directly with corporate operational expansion.</p>
+      </div>
+    </article>
+    <article class="m-card span-2 reveal-card" style="--delay:0s">
+      <div class="m-photo"><img src="assets/members/06-nguyen-khanh-linh.jpg" alt="Nguyen Khanh Linh - Strategist/Planner" loading="lazy"><div class="m-overlay"></div></div>
+      <div class="m-info">
+        <span class="m-num ui">06</span><h3 class="m-name">Nguyen Khanh Linh</h3><p class="m-role ui">Strategist/Planner</p>
+        <p class="m-desc">Analyzing micro-level target motivations to engineer behavioral experiential brand journeys.</p>
+      </div>
+    </article>
+    <article class="m-card span-2 reveal-card" style="--delay:0.1s">
+      <div class="m-photo"><img src="assets/members/07-nguyen-son-hai.jpg" alt="Nguyen Son Hai - Copywriter" loading="lazy"><div class="m-overlay"></div></div>
+      <div class="m-info">
+        <span class="m-num ui">07</span><h3 class="m-name">Nguyen Son Hai</h3><p class="m-role ui">Copywriter</p>
+        <p class="m-desc">"Forging structural messages that cut through hyper-saturated markets to spark long-term psychological retention."</p>
+      </div>
+    </article>
+    <article class="m-card span-2 reveal-card" style="--delay:0.2s">
+      <div class="m-photo"><img src="assets/members/08-nguyen-khanh-linh-2.jpg" alt="Nguyen Khanh Linh - Media Planner" loading="lazy"><div class="m-overlay"></div></div>
+      <div class="m-info">
+        <span class="m-num ui">08</span><h3 class="m-name">Nguyen Khanh Linh</h3><p class="m-role ui">Media Planner</p>
+        <p class="m-desc">Decrypting complex algorithmic shifts across primary networks to maximize audience impressions.</p>
+      </div>
+    </article>
+    <article class="m-card span-3 reveal-card" style="--delay:0s">
+      <div class="m-photo"><img src="assets/members/09-dang-tuyet-ngan.jpg" alt="Dang Tuyet Ngan - Content Creator" loading="lazy"><div class="m-overlay"></div></div>
+      <div class="m-info">
+        <span class="m-num ui">09</span><h3 class="m-name">Dang Tuyet Ngan</h3><p class="m-role ui">Content Creator</p>
+        <p class="m-desc">Converting complex brand narratives into hyper-viral social formats that capture organic engagement.</p>
+      </div>
+    </article>
+    <article class="m-card span-3 reveal-card" style="--delay:0.1s">
+      <div class="m-photo"><img src="assets/members/10-duong-danh-quang-vinh.jpg" alt="Duong Danh Quang Vinh - Media & Channel Lead" loading="lazy"><div class="m-overlay"></div></div>
+      <div class="m-info">
+        <span class="m-num ui">10</span><h3 class="m-name">Duong Danh Quang Vinh</h3><p class="m-role ui">Media &amp; Channel Lead</p>
+        <p class="m-desc">Scaling premium digital communities while controlling data parameters across meta networks.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ░░ 4. CASE STUDIES SECTION ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section id="works">
+  <div class="container">
+    <p class="section-label ui reveal">04 — Proof of Capability</p>
+    <h2 class="works-title reveal">FEATURED<br>CASE STUDIES</h2>
+  </div>
+
+  <div class="works-list">
+
+    <!-- CASE STUDY 01: FASHION / APPAREL -->
+    <div class="work-item reveal">
+      <div class="work-visual">
+        <img src="https://cdn.hstatic.net/1000284478/file/high-fashion-la-gi-1_14ffe58dca1f4bb6bcf23f5bb50a3ab0_grande.jpg" alt="Aura Studio Fashion Campaign">
+      </div>
+      <div class="work-info">
+        <div class="work-meta-row">
+          <span class="ui work-num">AURA STUDIO</span>
+          <span class="ui work-cat">Fashion Re-branding &amp; O2O Launch</span>
+          <span class="ui work-time" style="color:#888;">Duration: 6 Months</span>
+        </div>
+        <h3 class="work-name">Repositioning a Premium Designer Fashion Label</h3>
+        
+        <div class="cs-grid" style="margin: 25px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 14px; border-top: 1px solid #1a1a1a; padding-top: 15px;">
+          <div>
+            <h4 style="color:#ff0033; font-size:11px; letter-spacing:1px; margin-bottom:5px;">PAIN POINT</h4>
+            <p>Customer retention dropped by 40% due to market saturation. Brand struggled to capture elite Gen Z spenders on primary digital networks.</p>
+          </div>
+          <div>
+            <h4 style="color:#ff0033; font-size:11px; letter-spacing:1px; margin-bottom:5px;">BIG IDEA</h4>
+            <p style="color:#fff !important; font-style: italic;">"Tho Oi" Concept: Destroying Predictable Conformance.</p>
+            <p>Unveiling a cinematic, high-contrast visual lore that portrays modern women as bold, enigmatic, and completely self-governed.</p>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 25px;">
+          <h4 style="color:#ff0033; font-size:11px; letter-spacing:1px; margin-bottom:5px;">EXECUTION</h4>
+          <p>Produced an episodic narrative-driven digital lookbook. Deployed a custom "Tho Oi" interactive mask filter via TikTok. Programmed precision behavioral target modeling across high-street fashion buyers.</p>
+        </div>
+
+        <div class="work-tags" style="margin-bottom: 20px;">
+          <span style="border-color:#ff0033; color:#fff; font-weight:bold;">RESULTS: +150% Revenue</span>
+          <span style="border-color:#ff0033; color:#fff; font-weight:bold;">ROAS 4.8x</span>
+          <span>12M Organic Reach</span>
+          <span>+45k Active Followers</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE STUDY 02: BEAUTY / COSMETICS -->
+    <div class="work-item work-item--flip reveal">
+      <div class="work-visual">
+        <img src="https://cdn.tgdd.vn/Files/2023/02/18/1511177/top-5-loai-kem-nen-dior-dang-mua-nhat-ma-cac-tin-do-lam-dep-nen-co-202302180723229711.jpg" alt="Lumen Skincare Campaign">
+      </div>
+      <div class="work-info">
+        <div class="work-meta-row">
+          <span class="ui work-num">LUMEN SKINCARE</span>
+          <span class="ui work-cat">Digital IMC &amp; Performance Marketing</span>
+          <span class="ui work-time" style="color:#888;">Duration: 3 Months</span>
+        </div>
+        <h3 class="work-name">National Launch Campaign for Advanced Restoration Serum</h3>
+        
+        <div class="cs-grid" style="margin: 25px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 14px; border-top: 1px solid #1a1a1a; padding-top: 15px;">
+          <div>
+            <h4 style="color:#ff0033; font-size:11px; letter-spacing:1px; margin-bottom:5px;">PAIN POINT</h4>
+            <p>Cosmeceutical sector flooded with generic dry scientific jargon. Consumers voiced extreme skepticism toward local clinical efficacy.</p>
+          </div>
+          <div>
+            <h4 style="color:#ff0033; font-size:11px; letter-spacing:1px; margin-bottom:5px;">BIG IDEA</h4>
+            <p style="color:#fff !important; font-style: italic;">"Unmasking — Pure Dermatology Ownership"</p>
+            <p>A structured series of dark anonymous micro-documentaries where real users share vulnerability before revealing their absolute skin recovery.</p>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 25px;">
+          <h4 style="color:#ff0033; font-size:11px; letter-spacing:1px; margin-bottom:5px;">EXECUTION</h4>
+          <p>Activated 50 high-affinity empirical beauty KOCs for strict evidence reviews. Built retail skin mapping activations across core premium malls. Engineered conversion channels leading straight to global e-stores.</p>
+        </div>
+
+        <div class="work-tags" style="margin-bottom: 20px;">
+          <span style="border-color:#ff0033; color:#fff; font-weight:bold;">RESULTS: Sold Out 20,000 Units</span>
+          <span style="border-color:#ff0033; color:#fff; font-weight:bold;">8.2% Conv. Rate</span>
+          <span>3.2M Immersive Video Views</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE STUDY 03: TECH / ENTERPRISE (COLOR FIX APPLIED) -->
+    <div class="work-item reveal">
+      <div class="work-visual">
+        <img src="https://i.ex-cdn.com/nongnghiepmoitruong.vn/files/content/2026/04/14/san-giao-dich-viec-lam1-1775618293351-144844_516-152846.jpg" alt="Nexus App Launch">
+      </div>
+      <div class="work-info">
+        <div class="work-meta-row">
+          <span class="ui work-num">NEXUS APP</span>
+          <span class="ui work-cat">User Acquisition &amp; App Growth Engine</span>
+          <span class="ui work-time" style="color:#888;">Duration: 4 Months</span>
+        </div>
+        <h3 class="work-name">Scaling User Acquisition for Elite Freelance Platform</h3>
+        
+        <div class="cs-grid" style="margin: 25px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 14px; border-top: 1px solid #1a1a1a; padding-top: 15px;">
+          <div>
+            <h4 style="color:#ff0033; font-size:11px; letter-spacing:1px; margin-bottom:5px;">PAIN POINT</h4>
+            <p>Customer Acquisition Cost (CAC) inflated to an unsustainable $4.5/user. App uninstall rate peaked heavily at 65% within week 1.</p>
+          </div>
+          <div>
+            <h4 style="color:#ff0033; font-size:11px; letter-spacing:1px; margin-bottom:5px;">BIG IDEA</h4>
+            <p style="color:#fff !important; font-style: italic;">"Rescuing the Production Crisis at Midnight"</p>
+            <p>An satirical hyper-relatable video series capturing severe enterprise network collapses, defining the app as the ultimate corporate lifesaver.</p>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 25px;">
+          <h4 style="color:#ff0033; font-size:11px; letter-spacing:1px; margin-bottom:5px;">EXECUTION</h4>
+          <p>Built robust automated custom audiences inside Facebook &amp; Universal App Campaigns. Implemented trigger-driven lifecycle email flows to instantly wake dormant user categories.</p>
+        </div>
+
+        <div class="work-tags" style="margin-bottom: 20px;">
+          <span style="border-color:#ff0033; color:#fff; font-weight:bold;">RESULTS: +120,000 Verified Downloads</span>
+          <span style="border-color:#ff0033; color:#fff; font-weight:bold;">CAC Decreased by 55%</span>
+          <span>7-Day Retention +38%</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ░░ 5. CLIENTS & TESTIMONIALS SECTION (LOGO GRID INTEGRATED) ░░ -->
+<section id="testimonials">
+  <div class="container">
+    <p class="section-label ui reveal">05 — Trust Infrastructure</p>
+    <h2 class="section-title reveal">CLIENT TRUST &amp; GROWTH TRACK</h2>
+    
+    <!-- BRAND LOGO GRID ADDED HERE -->
+    <div class="client-logo-grid reveal">
+      <div class="logo-item serif-logo">DIOR</div>
+      <div class="logo-item">VOGUE</div>
+      <div class="logo-item tech-logo">LUMEN</div>
+      <div class="logo-item serif-logo">AURA</div>
+      <div class="logo-item tech-logo">NEXUS CO.</div>
+    </div>
+    
+    <div class="testimonials-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+      <div class="testi-card" style="background: #121212; padding: 30px; border-left: 3px solid #ff0033;">
+        <p style="font-size: 16px; line-height: 1.6; color: #fff; margin-bottom: 20px;">"TEAM 12 doesn't just deliver striking design; they balance it with aggressive performance monitoring. Hitting a 4.8x ROAS transformed our digital business pipeline completely."</p>
+        <div class="testi-author">
+          <strong style="display:block; color:#fff; font-size:14px;">Nguyen Hoang Nam</strong>
+          <span style="color:#666; font-size:12px;">CEO, Aura Studio</span>
+        </div>
+      </div>
+      <div class="testi-card" style="background: #121212; padding: 30px; border-left: 3px solid #ff0033;">
+        <p style="font-size: 16px; line-height: 1.6; color: #fff; margin-bottom: 20px;">"Their data-driven framework eliminated experimental media waste. A remarkably disciplined, forward-thinking, and analytical partner."</p>
+        <div class="testi-author">
+          <strong style="display:block; color:#fff; font-size:14px;">Tran Mai Anh</strong>
+          <span style="color:#666; font-size:12px;">Brand Manager, Lumen Skincare</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ 6. CONTACT SECTION ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label ui reveal">06 — Connection</p>
+    <h2 class="section-title reveal" style="margin-bottom: 40px;">INITIATE THE BRIEF</h2>
+    
+    <div class="contact-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
+      <div>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Brief Parameters Sent Successfully.');">
+          <div style="margin-bottom: 20px;">
+            <input type="text" placeholder="Corporate Entity / Contact Name" required style="width: 100%; background: transparent; border: none; border-bottom: 1px solid #333; padding: 15px 0; color: #fff; font-family: inherit; font-size: 15px;">
+          </div>
+          <div style="margin-bottom: 20px;">
+            <input type="email" placeholder="Corporate Email Address" required style="width: 100%; background: transparent; border: none; border-bottom: 1px solid #333; padding: 15px 0; color: #fff; font-family: inherit; font-size: 15px;">
+          </div>
+          <div style="margin-bottom: 30px;">
+            <textarea placeholder="Outline your current core business constraints?" rows="4" required style="width: 100%; background: transparent; border: none; border-bottom: 1px solid #333; padding: 15px 0; color: #fff; font-family: inherit; font-size: 15px; resize: none;"></textarea>
+          </div>
+          <button type="submit" style="background: #ff0033; color: #fff; border: none; padding: 15px 40px; font-family: 'Space Grotesk', sans-serif; font-weight: 500; cursor: pointer; letter-spacing: 1px; transition: transform 0.2s;">Submit Project Brief</button>
+        </form>
+      </div>
+      
+      <div class="contact-info" style="font-size: 15px; line-height: 1.8; color: #aaa;">
+        <h4 style="color:#fff; font-family:'Space Grotesk', sans-serif; font-size:16px; margin-bottom:15px;">RAPID AGENCY</h4>
+        <p>📍 Toa B1, HSB, Cau Giay, Ha Noi, Viet Nam</p>
+        <p>📞 Hotline: +84 (0) 90 777 2026</p>
+        <p>✉️ Email: pitch@rapidagency.vn</p>
+        <p>🌐 Website: rapid-agency.vercel.app</p>
+        
+        <div class="social-links" style="margin-top: 30px; display: flex; gap: 20px; font-size: 13px;">
+          <a href="#" style="color:#ff0033; text-decoration:none;">LinkedIn</a>
+          <a href="#" style="color:#fff; text-decoration:none;">Facebook</a>
+          <a href="#" style="color:#fff; text-decoration:none;">TikTok Portfolio</a>
+          <a href="#" style="color:#fff; text-decoration:none;">Behance</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ FOOTER ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <h2 class="footer-logo">RAPID<span class="red">AGENCY</span></h2>
+      <div class="footer-right">
+        <p class="footer-desc ui">Enterprise Digital Marketing &amp; Positioning Portfolio</p>
+        <p class="footer-desc ui">TEAM 12 — HSB — 2026</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="ui">© 2026 RAPID AGENCY · Hanoi School of Business and Management</span>
+      <span class="ui footer-tho" style="color: #ff0033;">Tho Oi Concept Pipeline ·</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Nav Scroll Management */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 80);
+}, { passive: true });
+
+/* Scroll Reveal System */
+const revealEls = document.querySelectorAll('.reveal, .reveal-card');
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const delay = el.style.getPropertyValue('--delay') || '0s';
+      el.style.transitionDelay = delay;
+      el.classList.add('visible');
+      revealObs.unobserve(el);
+    }
+  });
+}, { threshold: 0.1 });
+revealEls.forEach(el => revealObs.observe(el));
+</script>
+</body>
+</html>
