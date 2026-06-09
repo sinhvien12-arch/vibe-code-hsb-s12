@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng điều khiển phản hồi khách hàng</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="shared/styles.css">
+</head>
+<body class="bg-gray-50">
+  <nav id="navbar-container"></nav>
+
+  <main class="container mx-auto px-4 py-8">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Hệ Thống Phản Hồi Khách Hàng</h1>
+      <p class="text-lg text-gray-600 mb-8">Quản lý và phân tích phản hồi từ khách hàng</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <!-- Submit Feedback Card -->
+        <a href="pages/submit.html" class="block">
+          <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 h-full">
+            <div class="text-4xl mb-3">📝</div>
+            <h2 class="text-xl font-semibold text-gray-900 mb-2">Gửi Phản Hồi</h2>
+            <p class="text-gray-600">Chia sẻ ý kiến và đánh giá của bạn về dịch vụ</p>
+          </div>
+        </a>
+
+        <!-- Admin Dashboard Card -->
+        <a href="pages/admin.html" class="block">
+          <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 h-full">
+            <div class="text-4xl mb-3">📊</div>
+            <h2 class="text-xl font-semibold text-gray-900 mb-2">Bảng Quản Trị</h2>
+            <p class="text-gray-600">Xem và phân tích tất cả phản hồi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script src="shared/navbar.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNavbar('home');
+    });
+  </script>
+</body>
+</html>
