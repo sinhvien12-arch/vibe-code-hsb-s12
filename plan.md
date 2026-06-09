@@ -20,7 +20,7 @@ Think: A24 film × Criterion Collection × high-end Behance editorial.
 | # | Name | Role |
 |---|------|------|
 | 1 | Phạm Yến Nhi | Creative Lead |
-| 2 | Phùng Thái Pinky Minh Ngọc | Account Lead |
+| 2 | Phùng Thái Minh Ngọc | Account Lead |
 | 3 | Đỗ Mạnh Hưng | Art Director |
 | 4 | Nguyễn Mai Phương (Iris) | Media / Digital Lead |
 | 5 | Nguyễn Phương Thuỳ Linh | Project Lead |
